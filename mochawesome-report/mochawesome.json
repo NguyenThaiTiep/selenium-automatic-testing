@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-04-07T14:57:58.443Z",
+    "end": "2021-04-07T14:58:02.992Z",
+    "duration": 4549,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "bbba8d91-f52e-4614-9e77-3f8c92c71cfd",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "487760a7-96d3-49d5-869d-78a8676bbc9b",
+        "title": "Google search automated testing",
+        "fullFile": "C:\\Users\\ADMIN\\Desktop\\Testing\\selenium-auto-testing\\test\\index.js",
+        "file": "\\test\\index.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Google search automated testing \"before each\" hook",
+            "timedOut": false,
+            "duration": 7,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "page = new Page(\"https://www.google.com/\");",
+            "err": {},
+            "isRoot": false,
+            "uuid": "6fc2407d-f109-48be-84fe-5839cba85320",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "Google search automated testing \"after each\" hook",
+            "timedOut": false,
+            "duration": 4505,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await page.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ae5de2c1-3f80-42a9-8ee4-21f49c17ea7e",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "find the input box and google search button",
+            "fullTitle": "Google search automated testing find the input box and google search button",
+            "timedOut": false,
+            "duration": 1,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "expect(true).to.equal(true);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "518eb33f-5f4a-42d7-a72e-b3efcfe89057",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "518eb33f-5f4a-42d7-a72e-b3efcfe89057"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 1,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 15000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 2000
+  },
+  "copyrightYear": 2021
+}
