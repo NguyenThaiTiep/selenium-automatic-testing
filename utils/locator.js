@@ -1,5 +1,4 @@
 module.exports = {
-    searchInputSelectorId: 'lst-ib',
-    searchButtonSelectorName: 'btnK',
-    resultConfirmationId: 'resultStats'
+  success: true,
+  fail: false,
 };

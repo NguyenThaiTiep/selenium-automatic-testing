@@ -35,6 +35,39 @@ class Page {
     );
     return await this.driver.findElement(By.id(id));
   }
+  async findAnyById(id) {
+    await this.driver.wait(
+      until.elementsLocated(By.id(id)),
+      15000,
+      "Looking for element"
+    );
+    return await this.driver.findElements(By.id(id));
+  }
+  async findAnyByClass(classname) {
+    await this.driver.wait(
+      until.elementsLocated(By.className(classname)),
+      15000,
+      "Looking for element"
+    );
+    return await this.driver.findElements(By.className(classname));
+  }
+  async findByClass(classname) {
+    await this.driver.wait(
+      until.elementLocated(By.className(classname)),
+      15000,
+      "Looking for element"
+    );
+    return await this.driver.findElement(By.className(classname));
+  }
+  async findAnyByName(name) {
+    await this.driver.wait(
+      until.elementsLocated(By.name(name)),
+      15000,
+      "Looking for element"
+    );
+    return await this.driver.findElements(By.id(name));
+  }
+  async findAnyByXpath(str) {}
 
   // wait and find a specific element with it's name
   async findByName(name) {
@@ -45,8 +78,15 @@ class Page {
     );
     return await this.driver.findElement(By.name(name));
   }
+  async findByXpath(str) {
+    await this.driver.wait(
+      until.elementLocated(By.xpath(str)),
+      15000,
+      "Looking for element"
+    );
+    return await (await this.driver).findElement(By.xpath(str));
+  }
 
-  // fill input web elements
   async write(el, txt) {
     return await el.sendKeys(txt);
   }

@@ -1,3 +1,5 @@
-const { testOne } = require("./test-case/test-case-1");
+const { searchGoogleTest } = require("./search-google");
+const { testOne } = require("./test-case-exam/test-case-1");
 
-testOne();
+// testOne();
+searchGoogleTest();

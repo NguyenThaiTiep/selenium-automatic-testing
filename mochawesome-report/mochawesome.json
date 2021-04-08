@@ -2,24 +2,24 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2021-04-07T14:57:58.443Z",
-    "end": "2021-04-07T14:58:02.992Z",
-    "duration": 4549,
+    "failures": 1,
+    "start": "2021-04-08T11:01:06.834Z",
+    "end": "2021-04-08T11:01:10.620Z",
+    "duration": 3786,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "passPercentClass": "success",
+    "passPercentClass": "danger",
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "bbba8d91-f52e-4614-9e77-3f8c92c71cfd",
+    "uuid": "11f12db4-c708-4d87-950e-6b046a684cd8",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "487760a7-96d3-49d5-869d-78a8676bbc9b",
+        "uuid": "b5e605a5-7f1f-4e09-a593-4f4e23889275",
         "title": "Google search automated testing",
         "fullFile": "C:\\Users\\ADMIN\\Desktop\\Testing\\selenium-auto-testing\\test\\index.js",
         "file": "\\test\\index.js",
@@ -37,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Google search automated testing \"before each\" hook",
             "timedOut": false,
-            "duration": 7,
+            "duration": 8,
             "pass": false,
             "fail": false,
             "pending": false,
-            "code": "page = new Page(\"https://www.google.com/\");",
+            "code": "page = new SearchGoogleTesting(url);",
             "err": {},
             "isRoot": false,
-            "uuid": "6fc2407d-f109-48be-84fe-5839cba85320",
+            "uuid": "6ace3b26-785c-4d75-abc4-b73d0c5b1735",
             "isHook": true,
             "skipped": false
           }
@@ -54,48 +54,51 @@
             "title": "\"after each\" hook",
             "fullTitle": "Google search automated testing \"after each\" hook",
             "timedOut": false,
-            "duration": 4505,
+            "duration": 41,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await page.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "ae5de2c1-3f80-42a9-8ee4-21f49c17ea7e",
+            "uuid": "c6a13dd9-70d1-4b60-9874-6fdca1c429a0",
             "isHook": true,
             "skipped": false
           }
         ],
         "tests": [
           {
-            "title": "find the input box and google search button",
-            "fullTitle": "Google search automated testing find the input box and google search button",
+            "title": "Search test",
+            "fullTitle": "Google search automated testing Search test",
             "timedOut": false,
-            "duration": 1,
-            "state": "passed",
-            "speed": "fast",
-            "pass": true,
-            "fail": false,
+            "duration": 3729,
+            "state": "failed",
+            "pass": false,
+            "fail": true,
             "pending": false,
-            "code": "expect(true).to.equal(true);",
-            "err": {},
+            "code": "let result = await page.search(testCase.findText.input);\nexpect(result.length).to.greaterThan(testCase.findText.expected);\nreturn;",
+            "err": {
+              "message": "AssertionError: expected 6 to be above 10",
+              "estack": "AssertionError: expected 6 to be above 10\n    at Context.<anonymous> (test\\search-google\\index.js:28:34)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)",
+              "diff": "- 6\n+ 10\n"
+            },
             "isRoot": false,
-            "uuid": "518eb33f-5f4a-42d7-a72e-b3efcfe89057",
+            "uuid": "5919d327-3f41-4ab9-8307-b9a7dd540924",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [
-          "518eb33f-5f4a-42d7-a72e-b3efcfe89057"
+        "passes": [],
+        "failures": [
+          "5919d327-3f41-4ab9-8307-b9a7dd540924"
         ],
-        "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 1,
+        "duration": 3729,
         "root": false,
         "rootEmpty": false,
-        "_timeout": 15000
+        "_timeout": 50000
       }
     ],
     "passes": [],
