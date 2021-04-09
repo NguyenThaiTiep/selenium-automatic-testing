@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test --reporter mochawesome --reporter-options autoOpen=true"
+    "test": "mocha  --reporter mochawesome --reporter-options autoOpen=true",
+    "test:build": "mocha  --reporter mochawesome --reporter-options autoOpen=true"
   },
   "author": "",
   "license": "ISC",

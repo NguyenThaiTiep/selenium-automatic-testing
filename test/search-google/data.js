@@ -3,7 +3,11 @@ module.exports = {
   testCase: {
     findText: {
       input: "Facebook",
-      expected: 10,
+      expected: 6,
+    },
+    findPeople: {
+      input: "Nguyễn Thái Tiệp github",
+      expected: 5,
     },
   },
 };

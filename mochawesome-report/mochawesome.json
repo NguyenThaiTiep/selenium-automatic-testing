@@ -1,25 +1,25 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 0,
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-04-08T11:01:06.834Z",
-    "end": "2021-04-08T11:01:10.620Z",
-    "duration": 3786,
-    "testsRegistered": 1,
-    "passPercent": 0,
+    "failures": 0,
+    "start": "2021-04-09T09:04:53.334Z",
+    "end": "2021-04-09T09:05:04.710Z",
+    "duration": 11376,
+    "testsRegistered": 3,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
     "skipped": 0,
     "hasSkipped": false,
-    "passPercentClass": "danger",
+    "passPercentClass": "success",
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "11f12db4-c708-4d87-950e-6b046a684cd8",
+    "uuid": "d6d8f823-e93e-4efc-8816-f05f13787645",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "b5e605a5-7f1f-4e09-a593-4f4e23889275",
+        "uuid": "5937425f-ac8f-4c52-8707-7310a19c17a2",
         "title": "Google search automated testing",
         "fullFile": "C:\\Users\\ADMIN\\Desktop\\Testing\\selenium-auto-testing\\test\\index.js",
         "file": "\\test\\index.js",
@@ -37,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Google search automated testing \"before each\" hook",
             "timedOut": false,
-            "duration": 8,
+            "duration": 1,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "page = new SearchGoogleTesting(url);",
             "err": {},
             "isRoot": false,
-            "uuid": "6ace3b26-785c-4d75-abc4-b73d0c5b1735",
+            "uuid": "8612795d-2aba-44cc-b550-efa3d987258d",
             "isHook": true,
             "skipped": false
           }
@@ -54,48 +54,133 @@
             "title": "\"after each\" hook",
             "fullTitle": "Google search automated testing \"after each\" hook",
             "timedOut": false,
-            "duration": 41,
+            "duration": 95,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await page.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "c6a13dd9-70d1-4b60-9874-6fdca1c429a0",
+            "uuid": "44d1592b-f66d-4233-9231-3a49c609acd2",
             "isHook": true,
             "skipped": false
           }
         ],
         "tests": [
           {
-            "title": "Search test",
-            "fullTitle": "Google search automated testing Search test",
+            "title": "Test number result search google",
+            "fullTitle": "Google search automated testing Test number result search google",
             "timedOut": false,
-            "duration": 3729,
-            "state": "failed",
-            "pass": false,
-            "fail": true,
+            "duration": 4183,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
             "pending": false,
             "code": "let result = await page.search(testCase.findText.input);\nexpect(result.length).to.greaterThan(testCase.findText.expected);\nreturn;",
-            "err": {
-              "message": "AssertionError: expected 6 to be above 10",
-              "estack": "AssertionError: expected 6 to be above 10\n    at Context.<anonymous> (test\\search-google\\index.js:28:34)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)",
-              "diff": "- 6\n+ 10\n"
-            },
+            "err": {},
             "isRoot": false,
-            "uuid": "5919d327-3f41-4ab9-8307-b9a7dd540924",
+            "uuid": "a73a414d-35cb-4530-b1b3-75001feb4bbd",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Test result findy People",
+            "fullTitle": "Google search automated testing Test result findy People",
+            "timedOut": false,
+            "duration": 4317,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "let result = await page.search(testCase.findPeople.input);\nexpect(result.length).to.greaterThan(testCase.findPeople.expected);\nreturn;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "85862c34-c767-4a0a-9303-03c76ff5726b",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
-        "passes": [],
-        "failures": [
-          "5919d327-3f41-4ab9-8307-b9a7dd540924"
+        "passes": [
+          "a73a414d-35cb-4530-b1b3-75001feb4bbd",
+          "85862c34-c767-4a0a-9303-03c76ff5726b"
         ],
+        "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 3729,
+        "duration": 8500,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 50000
+      },
+      {
+        "uuid": "fc33b4a1-0543-440e-8547-a89e50150527",
+        "title": "Login Sach mem",
+        "fullFile": "C:\\Users\\ADMIN\\Desktop\\Testing\\selenium-auto-testing\\test\\index.js",
+        "file": "\\test\\index.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Login Sach mem \"before each\" hook",
+            "timedOut": false,
+            "duration": 0,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "page = new LoginSachmemTesting(url);",
+            "err": {},
+            "isRoot": false,
+            "uuid": "ce6cefa9-98a8-43ec-b3d1-40960a7bf39c",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "Login Sach mem \"after each\" hook",
+            "timedOut": false,
+            "duration": 59,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await page.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2172a54a-4390-4401-a72a-495930502b9f",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "Login Sach mem",
+            "fullTitle": "Login Sach mem Login Sach mem",
+            "timedOut": false,
+            "duration": 2639,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "const result = await page.login(\n  testCase.loginFail.input.username,\n  testCase.loginFail.input.password\n);\nexpect(result).to.equal(true);\nreturn;",
+            "err": {},
+            "isRoot": false,
+            "uuid": "384b04a4-f450-455a-b784-652241f4f6ab",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "384b04a4-f450-455a-b784-652241f4f6ab"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 2639,
         "root": false,
         "rootEmpty": false,
         "_timeout": 50000

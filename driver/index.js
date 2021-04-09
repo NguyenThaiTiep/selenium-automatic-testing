@@ -1,3 +1,4 @@
+const { util } = require("chai");
 const { Builder, By, until } = require("selenium-webdriver");
 
 const chrome = require("selenium-webdriver/chrome");
@@ -58,6 +59,14 @@ class Page {
       "Looking for element"
     );
     return await this.driver.findElement(By.className(classname));
+  }
+  async findByClassInElement(classname, element) {
+    await this.driver.wait(
+      until.elementLocated(By.className(classname)),
+      15000,
+      "Looking for element"
+    );
+    return await element.findElement(By.className(classname));
   }
   async findAnyByName(name) {
     await this.driver.wait(
