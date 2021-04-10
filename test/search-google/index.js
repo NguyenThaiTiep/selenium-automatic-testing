@@ -25,12 +25,24 @@ module.exports.searchGoogleTest = () => {
       });
       it("Test number result search google", async () => {
         let result = await page.search(testCase.findText.input);
-        expect(result.length).to.greaterThan(testCase.findText.expected);
+        expect(result.length >= testCase.findText.expected).to.equal(
+          testCase.findText.expected
+        );
         return;
       });
       it("Test result findy People", async () => {
         let result = await page.search(testCase.findPeople.input);
-        expect(result.length).to.greaterThan(testCase.findPeople.expected);
+        expect(result.length >= testCase.findPeople.expected).to.equal(
+          testCase.findPeople.expected
+        );
+        return;
+      });
+      it("Test result findy Random Key", async () => {
+        let result = await page.search(testCase.findRandom.input);
+        expect(result.length >= testCase.findRandom.expected).to.equal(
+          testCase.findRandom.expected
+        );
+        return;
         return;
       });
     });

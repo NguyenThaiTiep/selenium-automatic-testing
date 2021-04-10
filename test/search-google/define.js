@@ -18,7 +18,6 @@ class SearchGoogleTesting extends Page {
 
       let result = await this.driver.wait(async () => {
         const resultElements = await this.findAnyByClass("tF2Cxc");
-
         return resultElements;
       }, 15000);
 

@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 3,
-    "passes": 3,
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-04-09T09:04:53.334Z",
-    "end": "2021-04-09T09:05:04.710Z",
-    "duration": 11376,
-    "testsRegistered": 3,
+    "start": "2021-04-10T10:19:11.243Z",
+    "end": "2021-04-10T10:19:14.714Z",
+    "duration": 3471,
+    "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "d6d8f823-e93e-4efc-8816-f05f13787645",
+    "uuid": "629d9a45-e0f1-4b82-a697-36525e375e63",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,95 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "5937425f-ac8f-4c52-8707-7310a19c17a2",
-        "title": "Google search automated testing",
-        "fullFile": "C:\\Users\\ADMIN\\Desktop\\Testing\\selenium-auto-testing\\test\\index.js",
-        "file": "\\test\\index.js",
-        "beforeHooks": [
-          {
-            "title": "\"before each\" hook",
-            "fullTitle": "Google search automated testing \"before each\" hook",
-            "timedOut": false,
-            "duration": 1,
-            "pass": false,
-            "fail": false,
-            "pending": false,
-            "code": "page = new SearchGoogleTesting(url);",
-            "err": {},
-            "isRoot": false,
-            "uuid": "8612795d-2aba-44cc-b550-efa3d987258d",
-            "isHook": true,
-            "skipped": false
-          }
-        ],
-        "afterHooks": [
-          {
-            "title": "\"after each\" hook",
-            "fullTitle": "Google search automated testing \"after each\" hook",
-            "timedOut": false,
-            "duration": 95,
-            "pass": false,
-            "fail": false,
-            "pending": false,
-            "code": "await page.quit();",
-            "err": {},
-            "isRoot": false,
-            "uuid": "44d1592b-f66d-4233-9231-3a49c609acd2",
-            "isHook": true,
-            "skipped": false
-          }
-        ],
-        "tests": [
-          {
-            "title": "Test number result search google",
-            "fullTitle": "Google search automated testing Test number result search google",
-            "timedOut": false,
-            "duration": 4183,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "let result = await page.search(testCase.findText.input);\nexpect(result.length).to.greaterThan(testCase.findText.expected);\nreturn;",
-            "err": {},
-            "isRoot": false,
-            "uuid": "a73a414d-35cb-4530-b1b3-75001feb4bbd",
-            "isHook": false,
-            "skipped": false
-          },
-          {
-            "title": "Test result findy People",
-            "fullTitle": "Google search automated testing Test result findy People",
-            "timedOut": false,
-            "duration": 4317,
-            "state": "passed",
-            "speed": "slow",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "let result = await page.search(testCase.findPeople.input);\nexpect(result.length).to.greaterThan(testCase.findPeople.expected);\nreturn;",
-            "err": {},
-            "isRoot": false,
-            "uuid": "85862c34-c767-4a0a-9303-03c76ff5726b",
-            "isHook": false,
-            "skipped": false
-          }
-        ],
-        "suites": [],
-        "passes": [
-          "a73a414d-35cb-4530-b1b3-75001feb4bbd",
-          "85862c34-c767-4a0a-9303-03c76ff5726b"
-        ],
-        "failures": [],
-        "pending": [],
-        "skipped": [],
-        "duration": 8500,
-        "root": false,
-        "rootEmpty": false,
-        "_timeout": 50000
-      },
-      {
-        "uuid": "fc33b4a1-0543-440e-8547-a89e50150527",
+        "uuid": "29981620-6354-402e-b905-8461bf9c08f4",
         "title": "Login Sach mem",
         "fullFile": "C:\\Users\\ADMIN\\Desktop\\Testing\\selenium-auto-testing\\test\\index.js",
         "file": "\\test\\index.js",
@@ -125,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Login Sach mem \"before each\" hook",
             "timedOut": false,
-            "duration": 0,
+            "duration": 8,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "page = new LoginSachmemTesting(url);",
             "err": {},
             "isRoot": false,
-            "uuid": "ce6cefa9-98a8-43ec-b3d1-40960a7bf39c",
+            "uuid": "735c50e4-f5c2-4806-bc71-dc53e2dfe134",
             "isHook": true,
             "skipped": false
           }
@@ -142,14 +54,14 @@
             "title": "\"after each\" hook",
             "fullTitle": "Login Sach mem \"after each\" hook",
             "timedOut": false,
-            "duration": 59,
+            "duration": 270,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await page.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "2172a54a-4390-4401-a72a-495930502b9f",
+            "uuid": "5ae61e4e-dcc7-4d82-854b-1739cb45369a",
             "isHook": true,
             "skipped": false
           }
@@ -159,7 +71,7 @@
             "title": "Login Sach mem",
             "fullTitle": "Login Sach mem Login Sach mem",
             "timedOut": false,
-            "duration": 2639,
+            "duration": 3182,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -168,19 +80,19 @@
             "code": "const result = await page.login(\n  testCase.loginFail.input.username,\n  testCase.loginFail.input.password\n);\nexpect(result).to.equal(true);\nreturn;",
             "err": {},
             "isRoot": false,
-            "uuid": "384b04a4-f450-455a-b784-652241f4f6ab",
+            "uuid": "fa5246e6-db47-486c-942a-aaec560e7bc1",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "384b04a4-f450-455a-b784-652241f4f6ab"
+          "fa5246e6-db47-486c-942a-aaec560e7bc1"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 2639,
+        "duration": 3182,
         "root": false,
         "rootEmpty": false,
         "_timeout": 50000
